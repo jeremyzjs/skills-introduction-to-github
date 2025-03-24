@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile>
+  <diagram id="backup_system" name="Backup System">
+    <mxGraphModel dx="869" dy="612" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 生产服务器 -->
+        <mxCell id="2" value="生产服务器" style="shape=rectangle;fillColor=#FFCC00;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 收集服务器 -->
+        <mxCell id="3" value="收集服务器" style="shape=rectangle;fillColor=#66CCFF;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 备份服务器 -->
+        <mxCell id="4" value="备份服务器" style="shape=rectangle;fillColor=#FF6666;" vertex="1" parent="1">
+          <mxGeometry x="450" y="100" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接 生产服务器 -> 收集服务器 -->
+        <mxCell id="5" edge="1" parent="1" source="2" target="3" style="edgeStyle=elbowEdgeStyle;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接 收集服务器 -> 备份服务器 -->
+        <mxCell id="6" edge="1" parent="1" source="3" target="4" style="edgeStyle=elbowEdgeStyle;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接 生产服务器 -> 备份服务器 -->
+        <mxCell id="7" edge="1" parent="1" source="2" target="4" style="edgeStyle=elbowEdgeStyle;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- RAID 5 说明 -->
+        <mxCell id="8" value="RAID 5 保护" style="shape=ellipse;fillColor=#99CC99;" vertex="1" parent="1">
+          <mxGeometry x="300" y="200" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接 备份服务器 -> RAID 5 -->
+        <mxCell id="9" edge="1" parent="1" source="4" target="8" style="edgeStyle=elbowEdgeStyle;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
